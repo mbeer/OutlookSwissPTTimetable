@@ -1,31 +1,32 @@
-# OutlookSwissPTTimetable
+ï»¿# OutlookSwissPTTimetable
 Swiss public transport timetable add-in for Microsoft Outlook
 
-## So funktioniert die Fahrplanabfrage für Microsoft Outlook
+## So funktioniert die Fahrplanabfrage fÃ¼r Microsoft Outlook
 
-Möchten Sie die Reise mit öffentlichen Verkehrsmitteln zu ihren Terminen direkt in Microsoft Outlook planen? So geht’s:
+MÃ¶chten Sie die Reise mit Ã¶ffentlichen Verkehrsmitteln zu ihren Terminen direkt in Microsoft Outlook planen? So gehtâ€™s:
 
-1. Laden Sie das Installationsprogramm [von hier](https://github.com/mbeer/OutlookSwissPTTimetable/raw/master/publish/setup.exe) herunter und führen Sie es aus.
+1. Laden Sie das Installationsprogramm [von hier](https://github.com/mbeer/OutlookSwissPTTimetable/raw/master/publish/setup.exe) herunter und fÃ¼hren Sie es aus.
 1. Starten Sie Microsoft Outlook neu.
-1. Selektieren Sie in Ihrem Kalender den Termin, für den Sie die An- und Rückreise planen möchten.
-1. Klicken Sie im Menüband auf den Befehl «An-/Rückreise planen»  
-<img src="docs/RibbonButton.png" width="400" title="Menüband">
-1. Wählen Sie nun im sich öffnenden Dialogfenster
-    1. die nächstgelegene Haltestelle zum Besprechungsort
+1. Selektieren Sie in Ihrem Kalender den Termin, fÃ¼r den Sie die An- und RÃ¼ckreise planen mÃ¶chten.
+1. Klicken Sie im MenÃ¼band auf den Befehl Â«An-/RÃ¼ckreise planenÂ»  
+    <img src="docs/RibbonButton.png" width="400" title="MenÃ¼band">
+1. WÃ¤hlen Sie nun im sich Ã¶ffnenden Dialogfenster
+    1. die nÃ¤chstgelegene Haltestelle zum Besprechungsort
 	1. die Haltestelle, von der aus Sie anreisen
-	1. die Haltestelle, zu der Sie zurückreisen
-	1. für jede der Haltestellen die Zeit in Minuten, die Sie für den Übergang benötigen  
-![Hauptfenster](docs/MainWindow.png)
-1. Klicken Sie sowohl für die Anreise als auch für die Rückreise auf «Abfragen», um die passenden Verbindungen anzuzeigen.
-1. Wählen Sie die gewünschten Verbindungen in der Liste aus und klicken Sie auf «Anreise eintragen» bzw. «Rückreise eintragen», um ein entsprechendes Kalenderelement anzulegen.
+	1. die Haltestelle, zu der Sie zurÃ¼ckreisen
+	1. fÃ¼r jede der Haltestellen die Zeit in Minuten, die Sie fÃ¼r den Ãœbergang benÃ¶tigen  
+        ![Hauptfenster](docs/MainWindow.png)
+1. Klicken Sie sowohl fÃ¼r die Anreise als auch fÃ¼r die RÃ¼ckreise auf Â«AbfragenÂ», um die passenden Verbindungen anzuzeigen.
+1. WÃ¤hlen Sie die gewÃ¼nschten Verbindungen in der Liste aus und klicken Sie auf Â«Anreise eintragenÂ» bzw. Â«RÃ¼ckreise eintragenÂ», um ein entsprechendes Kalenderelement anzulegen.
 
-In den Programmeinstellungen lassen sich die am häufigsten genutzten Haltestellen (samt den zugehörigen Distanzen) festlegen, um sie bei der Verwendung des Add-ins aus der Auswahlliste wählen zu können.  
+In den Programmeinstellungen lassen sich die am hÃ¤ufigsten genutzten Haltestellen (samt den zugehÃ¶rigen Distanzen) festlegen, um sie bei der Verwendung des Add-ins aus der Auswahlliste wÃ¤hlen zu kÃ¶nnen.
+
 <img src="docs/SettingsWindow.png" width="400" title="Einstellungsfenster">
 
 
 ## Fahrplandaten
 
-OutlookSwissPTTimetable bezieht die Fahrplandaten über die [Swiss public transport API](https://transport.opendata.ch/), powered by [Opendata.ch](https://opendata.ch/).
+OutlookSwissPTTimetable bezieht die Fahrplandaten Ã¼ber die [Swiss public transport API](https://transport.opendata.ch/), powered by [Opendata.ch](https://opendata.ch/).
 
 ## Erstellt mit
 
@@ -35,13 +36,13 @@ OutlookSwissPTTimetable bezieht die Fahrplandaten über die [Swiss public transpo
 
 ## Autor
 
-* **Michael Beer** – [mbeer](https://github.com/mbeer/)
+* **Michael Beer** â€“ [mbeer](https://github.com/mbeer/)
 
 Sieh auch die Liste der [Mitwirkenden](https://github.com/mbeer/OutlookSwissPTTimetable/contributors) in diesem Projekt.
 
 ## Lizenz
 
-Dieses Projekt wird unter der [MIT-Lizenz](https://de.wikipedia.org/wiki/MIT-Lizenz) veröffentlicht – siehe die Datei [LICENSE](LICENSE).
+Dieses Projekt wird unter der [MIT-Lizenz](https://de.wikipedia.org/wiki/MIT-Lizenz) verÃ¶ffentlicht â€“ siehe die Datei [LICENSE](LICENSE).
 
 
 

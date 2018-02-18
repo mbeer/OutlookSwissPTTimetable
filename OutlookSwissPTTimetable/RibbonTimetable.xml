@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mso:customUI
+	xmlns:mso="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+  <mso:ribbon>
+    <mso:contextualTabs>
+      <mso:tabSet idMso="TabSetAppointment">
+        <mso:tab idQ="mso:TabAppointment">
+          <mso:group id="TimetableGroup" label="Fahrplanabfrage" 
+                     insertBeforeQ="mso:GroupLinkedMeetingNotes" autoScale="true">
+            <mso:button id="PlanJourneyButton" label="An-/Rückreise planen"
+                 screentip="An-/Rückreise planen" onAction="OnPlanJourneyButton"
+                 supertip="Zu dieser Besprechung die An- und Rückreise mit öffentlichen Verkehrsmitteln planen." visible="true"
+                        showImage="true" size="large" getImage="PlanJourneyButtonGetImage"/>            
+          </mso:group>
+        </mso:tab>
+      </mso:tabSet>
+    </mso:contextualTabs>
+  </mso:ribbon>
+</mso:customUI>

@@ -36,9 +36,9 @@ OutlookSwissPTTimetable bezieht die Fahrplandaten über die [Swiss public transp
 
 ## Autor
 
-* **Michael Beer** – [mbeer](https://github.com/mbeer/)
+Michael Beer – Github: [mbeer](https://github.com/mbeer/), Web: [michael.beer.name](http://www.michael.beer.name)
 
-Sieh auch die Liste der [Mitwirkenden](https://github.com/mbeer/OutlookSwissPTTimetable/contributors) in diesem Projekt.
+Siehe auch die Liste der [Mitwirkenden](https://github.com/mbeer/OutlookSwissPTTimetable/contributors) in diesem Projekt.
 
 ## Lizenz
 

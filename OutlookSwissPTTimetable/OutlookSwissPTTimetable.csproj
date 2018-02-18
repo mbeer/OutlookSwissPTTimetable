@@ -28,10 +28,10 @@
     <AssemblyName>OutlookSwissPTTimetable</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
-    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <IsWebBootstrapper>True</IsWebBootstrapper>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <PublishUrl>..\publish\</PublishUrl>
-    <InstallUrl />
+    <InstallUrl>https://github.com/mbeer/OutlookSwissPTTimetable/raw/master/publish/</InstallUrl>
     <TargetCulture>de</TargetCulture>
     <ApplicationVersion>1.0.0.2</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>

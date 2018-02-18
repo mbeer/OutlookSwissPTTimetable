@@ -8,24 +8,19 @@ Möchten Sie die Reise mit öffentlichen Verkehrsmitteln zu ihren Terminen direkt 
 1. Laden Sie das Installationsprogramm [von hier](https://github.com/mbeer/OutlookSwissPTTimetable/raw/master/publish/setup.exe) herunter und führen Sie es aus.
 1. Starten Sie Microsoft Outlook neu.
 1. Selektieren Sie in Ihrem Kalender den Termin, für den Sie die An- und Rückreise planen möchten.
-1. Klicken Sie im Menüband auf den Befehl «An-/Rückreise planen»
-
-<img src="docs/RibbonButton.png" width="250" title="Menüband">
-
+1. Klicken Sie im Menüband auf den Befehl «An-/Rückreise planen»  
+<img src="docs/RibbonButton.png" width="400" title="Menüband">
 1. Wählen Sie nun im sich öffnenden Dialogfenster
     1. die nächstgelegene Haltestelle zum Besprechungsort
 	1. die Haltestelle, von der aus Sie anreisen
 	1. die Haltestelle, zu der Sie zurückreisen
-	1. für jede der Haltestellen die Zeit in Minuten, die Sie für den Übergang benötigen
-
+	1. für jede der Haltestellen die Zeit in Minuten, die Sie für den Übergang benötigen  
 ![Hauptfenster](docs/MainWindow.png)
-
 1. Klicken Sie sowohl für die Anreise als auch für die Rückreise auf «Abfragen», um die passenden Verbindungen anzuzeigen.
 1. Wählen Sie die gewünschten Verbindungen in der Liste aus und klicken Sie auf «Anreise eintragen» bzw. «Rückreise eintragen», um ein entsprechendes Kalenderelement anzulegen.
 
 In den Programmeinstellungen lassen sich die am häufigsten genutzten Haltestellen (samt den zugehörigen Distanzen) festlegen, um sie bei der Verwendung des Add-ins aus der Auswahlliste wählen zu können.  
-
-<img src="docs/SettingsWindow.png" width="250" title="Einstellungsfenster">
+<img src="docs/SettingsWindow.png" width="400" title="Einstellungsfenster">
 
 
 ## Fahrplandaten

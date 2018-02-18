@@ -41,8 +41,17 @@
 # image files are treated as binary by default.
 ###############################################################################
 #*.jpg   binary
-#*.png   binary
+*.bmp   binary
 #*.gif   binary
+
+###############################################################################
+# behavior for ClickOnce files
+#
+# https://refactorsaurusrex.com/post/2015/how-to-host-a-clickonce-installer-on-github/
+###############################################################################
+*.manifest binary
+*.application binary
+*.deploy binary
 
 ###############################################################################
 # diff behavior for common document formats

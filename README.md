@@ -5,7 +5,8 @@ Swiss public transport timetable add-in for Microsoft Outlook
 
 Möchten Sie die Reise mit öffentlichen Verkehrsmitteln zu ihren Terminen direkt in Microsoft Outlook planen? So geht’s:
 
-1. Laden Sie das Installationsprogramm [von hier](https://github.com/mbeer/OutlookSwissPTTimetable/raw/master/publish/setup.exe) herunter und führen Sie es aus.
+1. Laden Sie das Installationsprogramm [von hier](https://github.com/mbeer/OutlookSwissPTTimetable/raw/master/publish/setup.exe) herunter und führen Sie es aus.  
+**[Achtung: Da das Installationsprogramm noch nicht digital signiert ist, kommt es bei der Installation zu Fehlermeldungen. An einer Lösung wird gearbeitet.]**
 1. Starten Sie Microsoft Outlook neu.
 1. Selektieren Sie in Ihrem Kalender den Termin, für den Sie die An- und Rückreise planen möchten.
 1. Klicken Sie im Menüband auf den Befehl «An-/Rückreise planen»  

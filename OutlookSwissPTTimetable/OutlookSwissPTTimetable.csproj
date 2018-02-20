@@ -272,11 +272,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>Ascertia_CodeSigning_Free_180319.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>0829F113717B625AB2E6741F85DCB33E1AD24927</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D45A199BE1FC0C3B6EE84A0A8611EEEE8635F3F3</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>

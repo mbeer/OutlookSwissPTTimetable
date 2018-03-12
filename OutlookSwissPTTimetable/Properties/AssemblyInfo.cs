@@ -7,7 +7,7 @@ using System.Security;
 // Allgemeine Informationen über eine Assembly werden über die folgende 
 // Attributgruppe gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("OutlookSwissPTTimetable")]
+[assembly: AssemblyTitle("Swiss timetable add-in for Outlook")]
 [assembly: AssemblyDescription("Swiss public transport timetable add-in for Microsoft Outlook")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]

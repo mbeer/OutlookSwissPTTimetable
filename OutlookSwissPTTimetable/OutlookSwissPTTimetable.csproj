@@ -33,7 +33,7 @@
     <PublishUrl>ftp://127.0.0.1:21215/</PublishUrl>
     <InstallUrl>https://timetable.mbeer.ch/</InstallUrl>
     <TargetCulture>de</TargetCulture>
-    <ApplicationVersion>1.0.0.7</ApplicationVersion>
+    <ApplicationVersion>1.0.0.12</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>14</UpdateInterval>
@@ -275,10 +275,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Ascertia_CodeSigning_Free_180319.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D45A199BE1FC0C3B6EE84A0A8611EEEE8635F3F3</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1491DBAF8918A75EA646CE7E4D38CC866D26221A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
@@ -287,7 +288,7 @@
     <AssemblyOriginatorKeyFile>OutlookSwissPTTimetable_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestTimestampUrl>http://timestamp.comodoca.com/</ManifestTimestampUrl>
+    <ManifestTimestampUrl>http://time.certum.pl/</ManifestTimestampUrl>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\B_T01.ico</ApplicationIcon>

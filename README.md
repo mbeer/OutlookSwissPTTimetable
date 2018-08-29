@@ -1,4 +1,5 @@
 ﻿# OutlookSwissPTTimetable
+
 Swiss public transport timetable add-in for Microsoft Outlook
 
 ## So funktioniert die Fahrplanabfrage für Microsoft Outlook
@@ -36,7 +37,7 @@ OutlookSwissPTTimetable bezieht die Fahrplandaten über die [Swiss public transp
 
 ## Autor
 
-Michael Beer – Github: [mbeer](https://github.com/mbeer/), Web: [michael.beer.name](http://www.michael.beer.name)
+Michael Beer – Github: [mbeer](https://github.com/mbeer/), Web: [michael.beer.name](https://www.michael.beer.name)
 
 Siehe auch die Liste der [Mitwirkenden](https://github.com/mbeer/OutlookSwissPTTimetable/contributors) in diesem Projekt.
 

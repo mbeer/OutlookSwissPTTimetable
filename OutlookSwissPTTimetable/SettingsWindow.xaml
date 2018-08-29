@@ -91,7 +91,7 @@
             <TabItem Header="Über…" Controls:ControlsHelper.HeaderFontSize="22">
                 <Grid>
                     <TextBlock TextWrapping="Wrap">
-                        <Bold><Run Text="Swiss timetable add-in for Microsoft Outlook"/></Bold><LineBreak/>
+                        <Bold><Run Text="Swiss timetable add-in for Microsoft Outlook"/></Bold><Run Text=" (Version "/><Run Text="{Binding Version, Mode=OneWay}" /><Run Text=")" /><LineBreak/>
                         <Hyperlink NavigateUri="https://github.com/mbeer/OutlookSwissPTTimetable" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="https://github.com/mbeer/OutlookSwissPTTimetable"/></Hyperlink><LineBreak/>
                         <LineBreak/>
                         <Run Text="Copyright © 2018 Michael Beer"/><LineBreak/>

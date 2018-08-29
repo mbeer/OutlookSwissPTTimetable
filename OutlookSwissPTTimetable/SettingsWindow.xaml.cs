@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro.Controls;
+using System.Deployment.Application;
 
 namespace OutlookSwissPTTimetable
 {
@@ -24,9 +25,29 @@ namespace OutlookSwissPTTimetable
     {
         public DataTable DefaultStations { get; set; }
 
+        public string Version
+        {
+            get
+            {
+                string version;
+                if (ApplicationDeployment.IsNetworkDeployed)
+                {
+                    ApplicationDeployment applicationDeployment = ApplicationDeployment.CurrentDeployment;
+                    version = applicationDeployment.CurrentVersion.ToString();
+                }
+                else
+                {
+                    version = "debug";
+                }
+
+                return version;
+            }
+        }
+
         public SettingsWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)

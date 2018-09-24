@@ -272,7 +272,6 @@ namespace OutlookSwissPTTimetable
             try
             {
                 Outlook.Application application = Globals.ThisAddIn.Application;
-                //Outlook.AppointmentItem newAppointment = (Outlook.AppointmentItem)application.CreateItem(Outlook.OlItemType.olAppointmentItem);
                 Outlook.AppointmentItem newAppointment = MAPIFolder.Items.Add(Outlook.OlItemType.olAppointmentItem) as Outlook.AppointmentItem;
                 newAppointment.Start = con.From.Departure.AddMinutes(FromOffset * (-1));
                 newAppointment.End = con.To.Arrival.AddMinutes(ToOffset);
@@ -280,6 +279,7 @@ namespace OutlookSwissPTTimetable
                 newAppointment.AllDayEvent = false;
                 newAppointment.Subject = "Transfer " + con.From.Location.Name + "–" + con.To.Location.Name;
                 newAppointment.Body = con.ToShortString();
+                newAppointment.BusyStatus = (Outlook.OlBusyStatus)Properties.Settings.Default.BusyStatus;
                 string rtf = con.ToRTF();
                 Encoding iso = Encoding.GetEncoding("ISO-8859-1");
                 newAppointment.RTFBody = iso.GetBytes(rtf);

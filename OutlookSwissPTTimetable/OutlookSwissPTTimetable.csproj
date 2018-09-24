@@ -33,7 +33,7 @@
     <PublishUrl>ftp://127.0.0.1:21215/</PublishUrl>
     <InstallUrl>https://timetable.mbeer.ch/</InstallUrl>
     <TargetCulture>de</TargetCulture>
-    <ApplicationVersion>1.0.0.13</ApplicationVersion>
+    <ApplicationVersion>1.0.0.15</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>14</UpdateInterval>
@@ -280,7 +280,7 @@
     </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>233A22053011169A715B1EBE7B53AD8821F9D15A</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1491DBAF8918A75EA646CE7E4D38CC866D26221A</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>

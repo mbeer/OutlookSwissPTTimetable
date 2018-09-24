@@ -5,5 +5,8 @@
     <Setting Name="ConnectionsLimit" Type="System.UInt16" Scope="User">
       <Value Profile="(Default)">4</Value>
     </Setting>
+    <Setting Name="BusyStatus" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

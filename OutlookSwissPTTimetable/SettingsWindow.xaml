@@ -84,11 +84,14 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Anzahl Verbindungen"/>
                     <Controls:NumericUpDown Grid.Column="1" Minimum="1" Value="{Binding Source={x:Static Properties:Settings.Default}, Path=ConnectionsLimit}" Maximum="6" HasDecimals="False" />
-                    <Label Content="Verbindung anzeigen als" Grid.Row="1"/>
-                    <ComboBox SelectedValuePath="Tag" SelectedValue="{Binding Source={x:Static Properties:Settings.Default}, Path=BusyStatus, Mode=TwoWay}" Grid.Column="1" Grid.Row="1">
+                    <Label Content="Anzahl Minuten Vor-/Rückschau" Grid.Row="1"/>
+                    <Controls:NumericUpDown Grid.Row="1" Grid.Column="1" Minimum="0" Value="{Binding Source={x:Static Properties:Settings.Default}, Path=LookaheadLookbackMinutes}" Maximum="60" HasDecimals="False" />
+                    <Label Content="Verbindung anzeigen als" Grid.Row="2"/>
+                    <ComboBox SelectedValuePath="Tag" SelectedValue="{Binding Source={x:Static Properties:Settings.Default}, Path=BusyStatus, Mode=TwoWay}" Grid.Column="1" Grid.Row="2">
                         <ComboBoxItem Content="Frei" Tag="0"/>
                         <ComboBoxItem Content="An anderem Ort tätig" Tag="4"/>
                         <ComboBoxItem Content="Mit Vorbehalt" Tag="1"/>

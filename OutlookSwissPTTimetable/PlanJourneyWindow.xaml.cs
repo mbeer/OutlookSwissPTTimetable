@@ -152,14 +152,14 @@ namespace OutlookSwissPTTimetable
 
             if (dir == Dir.In)
             {
-                time = Appointment.Start.AddMinutes((double)LocationDistanceUpDown.Value * (-1));
+                time = Appointment.Start.AddMinutes((double)LocationDistanceUpDown.Value * (-1) + Convert.ToDouble(Properties.Settings.Default.LookaheadLookbackMinutes));
                 from = InConnComboBox.Text.ToString();
                 to = LocationComboBox.Text.ToString();
                 isArrivalTime = true;
             }
             else
             {
-                time = Appointment.End.AddMinutes((double)LocationDistanceUpDown.Value);
+                time = Appointment.End.AddMinutes((double)LocationDistanceUpDown.Value - Convert.ToDouble(Properties.Settings.Default.LookaheadLookbackMinutes));
                 to = OutConnComboBox.Text.ToString();
                 from = LocationComboBox.Text.ToString();
                 isArrivalTime = false;
@@ -197,7 +197,7 @@ namespace OutlookSwissPTTimetable
                         InConnQryButton.IsEnabled = true;
                         if (n > 1)
                         {
-                            InConnDataGrid.SelectedIndex = n - 2;
+                            InConnDataGrid.SelectedIndex = n - 1;
                         }
                     }
                     else
@@ -209,7 +209,7 @@ namespace OutlookSwissPTTimetable
                         OutConnQryButton.IsEnabled = true;
                         if (n > 1)
                         {
-                            OutConnDataGrid.SelectedIndex = n - 2;
+                            OutConnDataGrid.SelectedIndex = 0;
                         }
                     }
 

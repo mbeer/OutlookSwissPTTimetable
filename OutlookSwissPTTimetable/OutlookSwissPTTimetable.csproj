@@ -222,7 +222,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Ascertia_CodeSigning_Free_180319.pfx" />
     <None Include="OutlookSwissPTTimetable_TemporaryKey.pfx" />
     <None Include="packages.config" />

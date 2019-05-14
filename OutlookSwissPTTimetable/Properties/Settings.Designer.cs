@@ -50,9 +50,9 @@ namespace OutlookSwissPTTimetable.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public string LookaheadLookbackMinutes {
+        public ushort LookaheadLookbackMinutes {
             get {
-                return ((string)(this["LookaheadLookbackMinutes"]));
+                return ((ushort)(this["LookaheadLookbackMinutes"]));
             }
             set {
                 this["LookaheadLookbackMinutes"] = value;

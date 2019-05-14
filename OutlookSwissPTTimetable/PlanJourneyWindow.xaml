@@ -65,6 +65,11 @@
         <Button x:Name="InConnQryButton" Grid.Column="2" Grid.Row="4" Click="InConnQryButton_Click" Content="Abfragen"/>
 
         <DataGrid x:Name="InConnDataGrid" Grid.ColumnSpan="3" Grid.Row="5" Margin="5,5,0,0" GridLinesVisibility="Horizontal" AutoGenerateColumns="False" SelectionChanged="InConnDataGrid_SelectionChanged">
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <TextBlock Padding="5" Text="{Binding Path=ViaString}" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=From.Departure, StringFormat=t}" Header="Abfahrt" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Path=Transfers}" Header="#Umst." IsReadOnly="True"/>
@@ -81,6 +86,11 @@
         <Button x:Name="OutConnQryButton" Grid.Column="6" Grid.Row="4" Content="Abfragen" Click="OutConnQryButton_Click"/>
 
         <DataGrid x:Name="OutConnDataGrid" Grid.ColumnSpan="3" Grid.Row="5" Margin="5,5,0,0" GridLinesVisibility="Horizontal" Grid.Column="4" SelectionChanged="OutConnDataGrid_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <TextBlock Padding="5" Text="{Binding Path=ViaString}" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=From.Departure, StringFormat=t}" Header="Abfahrt" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding Path=Transfers}" Header="#Umst." IsReadOnly="True"/>

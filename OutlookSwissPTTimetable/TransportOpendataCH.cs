@@ -49,7 +49,7 @@ namespace TransportOpendataCH
             }
 
             string Webstring = @"https://transport.opendata.ch/v1/connections?" + String.Join("&", parameters);
-
+            
             Uri Webaddress = new Uri(Webstring);
             HttpWebRequest request = WebRequest.Create(Webaddress) as HttpWebRequest;
             request.Method = "GET";
@@ -169,6 +169,50 @@ namespace TransportOpendataCH
         public string ToShortString()
         {
             return this.From.Location.Name + " (" + this.From.Departure.ToString("HH:mm") + ")-[" + this.Transfers + "]-" + this.To.Location.Name + " (" + this.To.Arrival.ToString("HH:mm") + ") (" + this.Duration + ")";
+        }
+
+        public string GetViaString()
+        {
+            string vias = String.Empty;
+            if (this.Transfers == 0)
+            {
+                return "direkt";
+            }
+            else
+            {
+                vias = "via ";
+                string station = "";
+                foreach (Section s in Sections)
+                {
+                    if (s.Departure.Location.Name == station)
+                    {
+                        if (station != "")
+                        {
+                            vias += "/";
+                            vias += s.Departure.Departure.ToString("HH:mm");
+                            vias += ")";
+                        }
+                    }
+                    station = s.Arrival.Location.Name;
+                    if (station != this.To.Location.Name)
+                    {
+                        if (s.Departure.Location.Name != this.From.Location.Name)
+                        {
+                            vias += "-";
+                        }
+                        vias += station;
+                        vias += " (";
+                        vias += s.Arrival.Arrival.ToString("HH:mm");
+                    } 
+                    
+                }
+            }
+            return vias;
+        }
+
+        public string ViaString
+        {
+            get { return GetViaString(); }
         }
 
         private string RTFTabRow(string station, string arr, string dep, string journey) => $@"\trowd\cellx3000\cellx3800\cellx4600\cellx6000 {station}\intbl\cell {arr}\intbl\cell {dep}\intbl\cell {journey}\intbl\cell\row";

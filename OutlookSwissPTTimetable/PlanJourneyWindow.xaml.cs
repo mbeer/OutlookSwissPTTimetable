@@ -156,9 +156,6 @@ namespace OutlookSwissPTTimetable
                 from = InConnComboBox.Text.ToString();
                 to = LocationComboBox.Text.ToString();
                 isArrivalTime = true;
-                InConnProgressRing.IsActive = true;
-                InConnProgressRing.Visibility = Visibility.Visible;
-                InConnQryButton.IsEnabled = false;
             }
             else
             {
@@ -166,13 +163,23 @@ namespace OutlookSwissPTTimetable
                 to = OutConnComboBox.Text.ToString();
                 from = LocationComboBox.Text.ToString();
                 isArrivalTime = false;
-                OutConnProgressRing.IsActive = true;
-                OutConnProgressRing.Visibility = Visibility.Visible;
-                OutConnQryButton.IsEnabled = false;
             }
 
             if (from.Length > 2 && to.Length > 2)
             {
+                if (dir == Dir.In)
+                {
+                    InConnProgressRing.IsActive = true;
+                    InConnProgressRing.Visibility = Visibility.Visible;
+                    InConnQryButton.IsEnabled = false;
+                }
+                else
+                {
+                    OutConnProgressRing.IsActive = true;
+                    OutConnProgressRing.Visibility = Visibility.Visible;
+                    OutConnQryButton.IsEnabled = false;
+                }
+
                 try
                 {
                     creq = new TransportOpendataCH.ConnectionsRequest(from, to, dateTime: time, isArrivalTime: isArrivalTime, limit: Properties.Settings.Default.ConnectionsLimit);
@@ -213,6 +220,9 @@ namespace OutlookSwissPTTimetable
                 }
 
 
+            } else
+            {
+                MessageBox.Show("Start- und/oder Zielort der Verbindung ist nicht angegeben.");
             }
 
         }

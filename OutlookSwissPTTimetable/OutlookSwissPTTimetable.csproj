@@ -33,7 +33,7 @@
     <PublishUrl>ftp://127.0.0.1:21215/</PublishUrl>
     <InstallUrl>https://timetable.mbeer.ch/</InstallUrl>
     <TargetCulture>de</TargetCulture>
-    <ApplicationVersion>1.0.0.15</ApplicationVersion>
+    <ApplicationVersion>1.0.0.16</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>14</UpdateInterval>
@@ -225,7 +225,6 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Ascertia_CodeSigning_Free_180319.pfx" />
     <None Include="OutlookSwissPTTimetable_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

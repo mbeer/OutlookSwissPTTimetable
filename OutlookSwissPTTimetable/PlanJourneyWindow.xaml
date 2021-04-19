@@ -12,7 +12,7 @@
     mc:Ignorable="d" 
     Width="800" 
     Height="500"    
-    BorderBrush="{DynamicResource AccentColorBrush}"
+    BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
     BorderThickness="1"
     WindowStartupLocation="CenterScreen"
     ResizeMode="NoResize"
@@ -26,9 +26,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Cobalt.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
@@ -57,11 +55,11 @@
         <Label x:Name="MeetingDescLabel" FontSize="22" Margin="0,0,0,0" Grid.ColumnSpan="6" Grid.Row="0" Content="Termin"/>
         <TextBlock x:Name="MeetingDescTextBlock" Margin="7,0,0,5" Grid.ColumnSpan="3" Grid.Row="1"><Run Text="Fr, 20.10.2017, 09:00–10:30 Uhr"/><LineBreak /><Bold><Run Text="Meetingort"/></Bold></TextBlock>
         <ComboBox x:Name="LocationComboBox" Grid.Row="2" Margin="5,0,0,0" IsEditable="True" DisplayMemberPath="name" SelectionChanged="LocationComboBox_SelectionChanged" ToolTip="Haltestelle in der Nähe des Besprechungsorts"/>
-        <Controls:NumericUpDown HasDecimals="False" x:Name="LocationDistanceUpDown" Minimum = "0" Maximum = "180" Interval = "5" Width="Auto" Grid.Column="1" Grid.Row="2" Value="0" ToolTip="Distanz in Minuten zwischen Haltestelle und Besprechungsort"/>
+        <Controls:NumericUpDown x:Name="LocationDistanceUpDown" Minimum = "0" Maximum = "180" Interval = "5" Width="Auto" Grid.Column="1" Grid.Row="2" Value="0" ToolTip="Distanz in Minuten zwischen Haltestelle und Besprechungsort"/>
 
         <Label FontSize="22" Margin="0,20,0,0" Grid.ColumnSpan="3" Grid.Row="3" Content="Anreise von"/>
         <ComboBox x:Name="InConnComboBox" Grid.Row="4" Margin="5,0,0,0" IsEditable="True" DisplayMemberPath="name" SelectionChanged="InConnComboBox_SelectionChanged" ToolTip="Haltestelle am Abgangsort"/>
-        <Controls:NumericUpDown  HasDecimals="False" x:Name="InConnDistanceUpDown" Minimum = "0" Maximum = "180" Interval = "5" Width="Auto" Grid.Column="1" Grid.Row="4" Value="0" ToolTip="Distanz in Minuten zwischen Haltestelle und Abgangsort"/>
+        <Controls:NumericUpDown x:Name="InConnDistanceUpDown" Minimum = "0" Maximum = "180" Interval = "5" Width="Auto" Grid.Column="1" Grid.Row="4" Value="0" ToolTip="Distanz in Minuten zwischen Haltestelle und Abgangsort"/>
         <Button x:Name="InConnQryButton" Grid.Column="2" Grid.Row="4" Click="InConnQryButton_Click" Content="Abfragen"/>
 
         <DataGrid x:Name="InConnDataGrid" Grid.ColumnSpan="3" Grid.Row="5" Margin="5,5,0,0" GridLinesVisibility="Horizontal" AutoGenerateColumns="False" SelectionChanged="InConnDataGrid_SelectionChanged">
@@ -82,7 +80,7 @@
 
         <Label FontSize="22" Margin="0,20,0,0" Grid.ColumnSpan="3" Grid.Row="3" Grid.Column="4" Content="Rückreise nach"/>
         <ComboBox x:Name="OutConnComboBox" Grid.Row="4" Margin="5,0,0,0" Grid.Column="4" IsEditable="True"  DisplayMemberPath="name" SelectionChanged="OutConnComboBox_SelectionChanged" ToolTip="Haltestelle am Bestimmungsort"/>
-        <Controls:NumericUpDown HasDecimals="False" x:Name="OutConnDistanceUpDown" Minimum = "0" Maximum = "180" Interval = "5" Width="Auto" Grid.Column="5" Grid.Row="4" Value="0" ToolTip="Distanz in Minuten zwischen Haltestelle und Bestimmungsort"/>
+        <Controls:NumericUpDown x:Name="OutConnDistanceUpDown" Minimum = "0" Maximum = "180" Interval = "5" Width="Auto" Grid.Column="5" Grid.Row="4" Value="0" ToolTip="Distanz in Minuten zwischen Haltestelle und Bestimmungsort"/>
         <Button x:Name="OutConnQryButton" Grid.Column="6" Grid.Row="4" Content="Abfragen" Click="OutConnQryButton_Click"/>
 
         <DataGrid x:Name="OutConnDataGrid" Grid.ColumnSpan="3" Grid.Row="5" Margin="5,5,0,0" GridLinesVisibility="Horizontal" Grid.Column="4" SelectionChanged="OutConnDataGrid_SelectionChanged" AutoGenerateColumns="False">
@@ -102,8 +100,8 @@
         <Controls:ProgressRing x:Name="OutConnProgressRing" Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="4" IsActive="False" />
         <Button x:Name="OutConnRecordButton" Grid.Row="6" Grid.ColumnSpan="3" Margin="5,0,0,0" IsEnabled="False" Grid.Column="4" Content="Rückreise eintragen" Click="OutConnRecordButton_Click"/>
 
-        <Button Style="{DynamicResource MetroCircleButtonStyle}" x:Name="SettingsButton" Grid.Column="6" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Click="SettingsButton_Click" ToolTip="Einstellungen" Width="40" Height="40">
-            <iconPacks:Material Kind="Settings" />
+        <Button Style="{DynamicResource MahApps.Styles.Button.Circle}" x:Name="SettingsButton" Grid.Column="6" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top" Click="SettingsButton_Click" ToolTip="Einstellungen" Width="40" Height="40">
+            <iconPacks:PackIconMaterial Kind="Cog" />
         </Button>
     </Grid>
 

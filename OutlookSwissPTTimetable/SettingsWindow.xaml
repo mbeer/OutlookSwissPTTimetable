@@ -13,7 +13,7 @@
     mc:Ignorable="d" 
     Width="500" 
     Height="450"    
-    BorderBrush="{DynamicResource AccentColorBrush}"
+    BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
     BorderThickness="1"
     WindowStartupLocation="CenterScreen"
     ResizeMode="NoResize"
@@ -26,9 +26,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Cobalt.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
@@ -42,7 +40,7 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <TabControl HorizontalAlignment="Left" Width="500">
-            <TabItem Header="Standardhaltestellen" Controls:ControlsHelper.HeaderFontSize="22">
+            <TabItem Header="Standardhaltestellen" Controls:HeaderedControlHelper.HeaderFontSize="22">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -59,23 +57,23 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel Grid.Row="0" Grid.Column="1">
-                        <Button x:Name="UpButton" Click="UpButton_Click" Style="{DynamicResource MetroCircleButtonStyle}" Width="40" Height="40" ToolTip="Eintrag nach oben verschieben">
+                        <Button x:Name="UpButton" Click="UpButton_Click" Style="{DynamicResource MahApps.Styles.Button.Circle}" Width="40" Height="40" ToolTip="Eintrag nach oben verschieben">
                             <iconPacks:Material Kind="ArrowUpThick" />
                         </Button>
-                        <Button x:Name="DownButton" Click="DownButton_Click" Style="{DynamicResource MetroCircleButtonStyle}" Width="40" Height="40" ToolTip="Eintrag nach unten verschieben">
+                        <Button x:Name="DownButton" Click="DownButton_Click" Style="{DynamicResource MahApps.Styles.Button.Circle}" Width="40" Height="40" ToolTip="Eintrag nach unten verschieben">
                             <iconPacks:Material Kind="ArrowDownThick" />
                         </Button>
-                        <Button x:Name="SortButton" Click="SortButton_Click" Style="{DynamicResource MetroCircleButtonStyle}" Width="40" Height="40" ToolTip="Einträge alphabetisch sortieren">
-                            <iconPacks:Material Kind="SortAlphabetical" />
+                        <Button x:Name="SortButton" Click="SortButton_Click" Style="{DynamicResource MahApps.Styles.Button.Circle}" Width="40" Height="40" ToolTip="Einträge alphabetisch sortieren">
+                            <iconPacks:Material Kind="SortAlphabeticalAscending" />
                         </Button>
-                        <Button x:Name="DeleteButton" Click="DeleteButton_Click" Style="{DynamicResource MetroCircleButtonStyle}" Width="40" Height="40" ToolTip="Eintrag löschen">
+                        <Button x:Name="DeleteButton" Click="DeleteButton_Click" Style="{DynamicResource MahApps.Styles.Button.Circle}" Width="40" Height="40" ToolTip="Eintrag löschen">
                             <iconPacks:Material Kind="Delete" />
                         </Button>
                     </StackPanel>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Anzeige" Controls:ControlsHelper.HeaderFontSize="22">
+            <TabItem Header="Anzeige" Controls:HeaderedControlHelper.HeaderFontSize="22">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -87,9 +85,9 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Label Content="Anzahl Verbindungen"/>
-                    <Controls:NumericUpDown Grid.Column="1" Minimum="1" Value="{Binding Source={x:Static Properties:Settings.Default}, Path=ConnectionsLimit}" Maximum="6" HasDecimals="False" />
+                    <Controls:NumericUpDown Grid.Column="1" Minimum="1" Value="{Binding Source={x:Static Properties:Settings.Default}, Path=ConnectionsLimit}" Maximum="6" />
                     <Label Content="Anzahl Minuten Vor-/Rückschau" Grid.Row="1"/>
-                    <Controls:NumericUpDown Grid.Row="1" Grid.Column="1" Minimum="0" Value="{Binding Source={x:Static Properties:Settings.Default}, Path=LookaheadLookbackMinutes}" Maximum="60" HasDecimals="False" />
+                    <Controls:NumericUpDown Grid.Row="1" Grid.Column="1" Minimum="0" Value="{Binding Source={x:Static Properties:Settings.Default}, Path=LookaheadLookbackMinutes}" Maximum="60" />
                     <Label Content="Verbindung anzeigen als" Grid.Row="2"/>
                     <ComboBox SelectedValuePath="Tag" SelectedValue="{Binding Source={x:Static Properties:Settings.Default}, Path=BusyStatus, Mode=TwoWay}" Grid.Column="1" Grid.Row="2">
                         <ComboBoxItem Content="Frei" Tag="0"/>
@@ -100,13 +98,13 @@
                     </ComboBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Über…" Controls:ControlsHelper.HeaderFontSize="22">
+            <TabItem Header="Über…" Controls:HeaderedControlHelper.HeaderFontSize="22">
                 <Grid>
                     <TextBlock TextWrapping="Wrap">
                         <Bold><Run Text="Swiss timetable add-in for Microsoft Outlook"/></Bold><Run Text=" (Version "/><Run Text="{Binding Version, Mode=OneWay}" /><Run Text=")" /><LineBreak/>
                         <Hyperlink NavigateUri="https://github.com/mbeer/OutlookSwissPTTimetable" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="https://github.com/mbeer/OutlookSwissPTTimetable"/></Hyperlink><LineBreak/>
                         <LineBreak/>
-                        <Run Text="Copyright © 2018 Michael Beer"/><LineBreak/>
+                        <Run Text="Copyright © 2018–2021 Michael Beer"/><LineBreak/>
                         <LineBreak/>
                         <Run Text="The pictogram used for the ribbon button is © SBB CFF FFS."/><LineBreak/>
                         <LineBreak/>

@@ -5,7 +5,6 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using static System.Net.WebRequestMethods;
 
 namespace TransportOpendataCH
 {
@@ -51,6 +50,7 @@ namespace TransportOpendataCH
             string Webstring = @"https://transport.opendata.ch/v1/connections?" + String.Join("&", parameters);
             
             Uri Webaddress = new Uri(Webstring);
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             HttpWebRequest request = WebRequest.Create(Webaddress) as HttpWebRequest;
             request.Method = "GET";
             request.UserAgent = "Swiss public transport timetable add-in for Microsoft Outlook";

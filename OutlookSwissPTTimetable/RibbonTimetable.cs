@@ -80,7 +80,7 @@ namespace OutlookSwissPTTimetable
                     Object selObject = application.ActiveExplorer().Selection[1];
                     if (selObject is Outlook.AppointmentItem)
                     {
-                        Outlook.AppointmentItem apptItem = (selObject as Outlook.AppointmentItem);
+                        Outlook.AppointmentItem apptItem = selObject as Outlook.AppointmentItem;
                         PlanJourneyWindow pjw = new PlanJourneyWindow
                         {
                             Appointment = apptItem,

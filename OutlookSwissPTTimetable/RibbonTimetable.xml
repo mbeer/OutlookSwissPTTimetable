@@ -14,6 +14,17 @@
           </mso:group>
         </mso:tab>
       </mso:tabSet>
-    </mso:contextualTabs>
+		<mso:tabSet idMso="TabSetReccurringAppointment">
+			<mso:tab idQ="mso:TabRecurringAppointment">
+				<mso:group id="TimetableGroupR" label="Fahrplanabfrage"
+						   insertBeforeQ="mso:GroupLinkedMeetingNotes" autoScale="true">
+					<mso:button id="PlanJourneyButtonR" label="An-/Rückreise planen"
+						 screentip="An-/Rückreise planen" onAction="OnPlanJourneyButton"
+						 supertip="Zu dieser Besprechung die An- und Rückreise mit öffentlichen Verkehrsmitteln planen." visible="true"
+								showImage="true" size="large" getImage="PlanJourneyButtonGetImage"/>
+				</mso:group>
+			</mso:tab>
+		</mso:tabSet>
+	</mso:contextualTabs>
   </mso:ribbon>
 </mso:customUI>

@@ -15,8 +15,8 @@ namespace OutlookSwissPTTimetable
     /// </summary>
     public partial class PlanJourneyWindow : MetroWindow
     {
-        public TransportOpendataCH.Connection[] InConnections { get; set; }
-        public TransportOpendataCH.Connection[] OutConnections { get; set; }
+        public FahrplanSearchCH.Connection[] InConnections { get; set; }
+        public FahrplanSearchCH.Connection[] OutConnections { get; set; }
 
         private DataTable defaultStations;
 
@@ -147,8 +147,8 @@ namespace OutlookSwissPTTimetable
             String to;
             bool isArrivalTime;
             int n = 0;
-            TransportOpendataCH.ConnectionsRequest creq;
-            TransportOpendataCH.ConnectionsResponse cres;
+            FahrplanSearchCH.ConnectionsRequest creq;
+            FahrplanSearchCH.ConnectionsResponse cres;
 
             if (dir == Dir.In)
             {
@@ -182,7 +182,7 @@ namespace OutlookSwissPTTimetable
 
                 try
                 {
-                    creq = new TransportOpendataCH.ConnectionsRequest(from, to, dateTime: time, isArrivalTime: isArrivalTime, limit: Properties.Settings.Default.ConnectionsLimit);
+                    creq = new FahrplanSearchCH.ConnectionsRequest(from, to, dateTime: time, isArrivalTime: isArrivalTime, limit: Properties.Settings.Default.ConnectionsLimit);
                     cres = await creq.GetConnectionsAsync();
                     if (cres.Connections != null)
                     {
@@ -276,18 +276,18 @@ namespace OutlookSwissPTTimetable
             }
         }
 
-        private void RecordConnection(TransportOpendataCH.Connection con, double FromOffset = 0, double ToOffset = 0)
+        private void RecordConnection(FahrplanSearchCH.Connection con, double FromOffset = 0, double ToOffset = 0)
         {
             
             try
             {
                 Outlook.Application application = Globals.ThisAddIn.Application;
                 Outlook.AppointmentItem newAppointment = MAPIFolder.Items.Add(Outlook.OlItemType.olAppointmentItem) as Outlook.AppointmentItem;
-                newAppointment.Start = con.From.Departure.AddMinutes(FromOffset * (-1));
-                newAppointment.End = con.To.Arrival.AddMinutes(ToOffset);
-                newAppointment.Location = String.Join(", ", con.Products);
+                newAppointment.Start = con.Departure.AddMinutes(FromOffset * (-1));
+                newAppointment.End = con.Arrival.AddMinutes(ToOffset);
+                newAppointment.Location = "ÖV";
                 newAppointment.AllDayEvent = false;
-                newAppointment.Subject = "Transfer " + con.From.Location.Name + "–" + con.To.Location.Name;
+                newAppointment.Subject = "Transfer " + con.From + "–" + con.To;
                 newAppointment.Body = con.ToShortString();
                 newAppointment.BusyStatus = (Outlook.OlBusyStatus)Properties.Settings.Default.BusyStatus;
                 string rtf = con.ToRTF();

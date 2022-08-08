@@ -104,11 +104,11 @@
                         <Bold><Run Text="Swiss timetable add-in for Microsoft Outlook"/></Bold><Run Text=" (Version "/><Run Text="{Binding Version, Mode=OneWay}" /><Run Text=")" /><LineBreak/>
                         <Hyperlink NavigateUri="https://github.com/mbeer/OutlookSwissPTTimetable" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="https://github.com/mbeer/OutlookSwissPTTimetable"/></Hyperlink><LineBreak/>
                         <LineBreak/>
-                        <Run Text="Copyright © 2018–2021 Michael Beer"/><LineBreak/>
+                        <Run Text="Copyright © 2018–2022 Michael Beer"/><LineBreak/>
                         <LineBreak/>
                         <Run Text="The pictogram used for the ribbon button is © SBB CFF FFS."/><LineBreak/>
                         <LineBreak/>
-                        <Run Text="This add-in uses the "/><Hyperlink NavigateUri="https://transport.opendata.ch" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="Swiss public transport API"/></Hyperlink><Run Text=", powered by "/><Hyperlink NavigateUri="https://opendata.ch/" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="Opendata.ch"/></Hyperlink><Run Text="."/><LineBreak/>
+                        <Run Text="This add-in uses the "/><Hyperlink NavigateUri="https://fahrplan.search.ch/api/help" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="timetable API"/></Hyperlink><Run Text=", powered by "/><Hyperlink NavigateUri="https://search.ch/" RequestNavigate="Hyperlink_RequestNavigate"><Run Text="search.ch"/></Hyperlink><Run Text="."/><LineBreak/>
                         <LineBreak/>
                         <Run Text="It uses the following third-party components:"/><LineBreak/>
                         <Run Text="– "/><Hyperlink NavigateUri="https://www.newtonsoft.com/json" RequestNavigate="Hyperlink_RequestNavigate">Json.NET</Hyperlink><LineBreak/>

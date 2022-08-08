@@ -12,7 +12,7 @@ using System.Security;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("OutlookSwissPTTimetable")]
-[assembly: AssemblyCopyright("Copyright © 2018–2021 Michael Beer")]
+[assembly: AssemblyCopyright("Copyright © 2018–2022 Michael Beer")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

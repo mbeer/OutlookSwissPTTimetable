@@ -34,7 +34,7 @@
     <PublishUrl>ftp://127.0.0.1:21215/</PublishUrl>
     <InstallUrl>https://timetable.mbeer.ch/</InstallUrl>
     <TargetCulture>de</TargetCulture>
-    <ApplicationVersion>1.0.0.17</ApplicationVersion>
+    <ApplicationVersion>1.0.0.18</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>14</UpdateInterval>
@@ -291,10 +291,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>OutlookSwissPTTimetable_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>4A0208F22A806843F17906AC3A339091B1727148</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A28F70BBD5299CD01E2052B3B79FC6E0607E04B8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>

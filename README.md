@@ -37,7 +37,7 @@ In den Programmeinstellungen lassen sich die am häufigsten genutzten Haltestell
 
 ## Fahrplandaten
 
-OutlookSwissPTTimetable bezieht die Fahrplandaten über die [Swiss public transport API](https://transport.opendata.ch/), powered by [Opendata.ch](https://opendata.ch/).
+OutlookSwissPTTimetable bezieht die Fahrplandaten über die [Fahrplan-API](https://fahrplan.search.ch/api/help), powered by [search.ch](https://search.ch/).
 
 ## Erstellt mit
 

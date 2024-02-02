@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -195,9 +194,9 @@ namespace OutlookSwissPTTimetable
                         InConnProgressRing.IsActive = false;
                         InConnProgressRing.Visibility = Visibility.Collapsed;
                         InConnQryButton.IsEnabled = true;
-                        if (n > 1)
+                        if (n > 2)
                         {
-                            InConnDataGrid.SelectedIndex = n - 1;
+                            InConnDataGrid.SelectedIndex = n - 2;
                         }
                     }
                     else

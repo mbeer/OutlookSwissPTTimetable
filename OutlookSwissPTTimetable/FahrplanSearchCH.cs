@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
@@ -40,9 +39,13 @@ namespace FahrplanSearchCH
             if (isArrivalTime)
             {
                 parameters.Add("time_type=arrival");
+                parameters.Add("num=1");
+                parameters.Add("pre=" + limit.ToString());
             } else
             {
-                parameters.Add("time_type = depart");
+                parameters.Add("time_type=depart");
+                parameters.Add("num=" + limit.ToString());
+                parameters.Add("pre=1");
             }
             foreach (string v in via)
             {

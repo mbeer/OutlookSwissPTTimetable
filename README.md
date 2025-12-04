@@ -1,4 +1,16 @@
-﻿# OutlookSwissPTTimetable
+> ⚠️ **Hinweis / Note**
+>
+> Dieses Repository enthält die klassische Version des Outlook-Add-ins «OutlookSwissPTTimetable».
+> Diese Version wird nicht mehr weiterentwickelt.
+> Die aktuelle, aktiv gepflegte Version findest du hier:
+> 👉 https://github.com/mbeer/OutlookSwissPT-OfficeJS
+>
+> This repository contains the classic version of the Outlook add-in "OutlookSwissPTTimetable".
+> This version is no longer actively maintained.
+> The current, actively maintained version is available here:
+> 👉 https://github.com/mbeer/OutlookSwissPT-OfficeJS
+
+# OutlookSwissPTTimetable
 
 Swiss public transport timetable add-in for Microsoft Outlook
 
